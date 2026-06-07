@@ -255,9 +255,7 @@ function closeModal() {
 /* ============================================================
    PLACEHOLDER SCREENS (built in next steps)
    ============================================================ */
-function renderRoutines() {
-  placeholder("routines", "📋", "Rutinas", "Aquí podrás crear y editar tus rutinas. Lo construimos en el siguiente paso.");
-}
+/* renderRoutines() lives in js/routines.js */
 function renderTrain() {
   placeholder("train", "⏱️", "Entrenar", "Cronómetro y registro de series en tiempo real. Próximo paso.");
 }
