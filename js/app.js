@@ -35,6 +35,8 @@ function renderScreen(name) {
     case "routines": renderRoutines(); break;
     case "train": renderTrain(); break;
     case "ranks": renderRanks(); break;
+    case "achievements": renderAchievements(); break;
+    case "history": renderHistory(); break;
   }
 }
 
@@ -75,6 +77,8 @@ function renderHome() {
       ${actionRow("⏱️", "Entrenar", "Inicia una sesión y cronómetro", "train")}
       ${actionRow("📋", "Mis rutinas", "Crea o edita tus rutinas", "routines")}
       ${actionRow("🏅", "Mis rangos", "Mira tu nivel por músculo", "ranks")}
+      ${actionRow("🏆", "Logros", "Tus medallas e hitos", "achievements")}
+      ${actionRow("📖", "Historial", "Tus entrenos anteriores", "history")}
     </div>
   `;
 
@@ -256,22 +260,8 @@ function closeModal() {
    PLACEHOLDER SCREENS (built in next steps)
    ============================================================ */
 /* renderRoutines() lives in js/routines.js */
-function renderTrain() {
-  placeholder("train", "⏱️", "Entrenar", "Cronómetro y registro de series en tiempo real. Próximo paso.");
-}
-function renderRanks() {
-  placeholder("ranks", "🏅", "Rangos", "Mapa del cuerpo con tu nivel por músculo (bronce, plata, oro...). Fase 2.");
-}
-
-function placeholder(screen, icon, title, text) {
-  const el = document.querySelector(`[data-screen="${screen}"]`);
-  el.innerHTML = `
-    <h2 class="text-xl font-extrabold mb-6">${title}</h2>
-    <div class="card p-8 text-center">
-      <div class="text-5xl mb-4">${icon}</div>
-      <p class="text-white/50 text-sm leading-relaxed">${text}</p>
-    </div>`;
-}
+/* renderTrain() lives in js/train.js */
+/* renderRanks() lives in js/ranks.js */
 
 /* ---- Boot: show home ---- */
 goTo("home");

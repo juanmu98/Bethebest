@@ -46,7 +46,7 @@ Actúa como un **CTO y Desarrollador Senior de Software**. Cuando te pida trabaj
 
 # Sobre mí
 
-Soy una persona sin ningún conocimiento técnico de programación. Trabajo en Windows con Claude Code desde la terminal y uso VS Code como editor de código y Obsidian para tomar notas y organizar ideas. Mi objetivo es crear páginas web y aplicaciones explorando distintos tipos de proyectos.
+Soy una persona sin ningún conocimiento técnico de programación. y uso Code como editor de código y Obsidian para tomar notas y organizar ideas. Mi objetivo es crear páginas web y aplicaciones explorando distintos tipos de proyectos.
 
 ---
 

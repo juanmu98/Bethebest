@@ -1,6 +1,11 @@
 # Local tooling / preview config
 .claude/
 
+# Node tooling used only to process images (not part of the app)
+node_modules/
+package.json
+package-lock.json
+
 # OS files
 Thumbs.db
 desktop.ini
