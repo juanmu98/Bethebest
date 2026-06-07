@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>BeTheBest</title>
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Custom theme: dark background + lime green accent
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: "#0d0f0c",       // near-black background
+            panel: "#161914",     // dark card surface
+            lime: {
+              DEFAULT: "#bdf60a", // energetic lime green accent
+              dark: "#9bd400",
+            },
+          },
+          fontFamily: {
+            sans: ["Inter", "system-ui", "sans-serif"],
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body class="bg-ink text-white font-sans min-h-screen">
+
+  <!-- App shell: mobile-sized container centered on desktop -->
+  <div id="app" class="max-w-md mx-auto min-h-screen flex flex-col bg-ink relative">
+
+    <!-- ===== Top header ===== -->
+    <header class="px-5 pt-6 pb-3 flex items-center justify-between sticky top-0 bg-ink/95 backdrop-blur z-20">
+      <h1 class="text-2xl font-extrabold tracking-tight">
+        Be<span class="text-lime">The</span>Best
+      </h1>
+      <div class="w-9 h-9 rounded-full bg-lime/15 flex items-center justify-center text-lime font-bold">B</div>
+    </header>
+
+    <!-- ===== Screens get injected/toggled here ===== -->
+    <main id="screens" class="flex-1 overflow-y-auto pb-24">
+
+      <!-- Home / Profile -->
+      <section data-screen="home" class="screen px-5"></section>
+
+      <!-- Exercises -->
+      <section data-screen="exercises" class="screen hidden px-5"></section>
+
+      <!-- Routines -->
+      <section data-screen="routines" class="screen hidden px-5"></section>
+
+      <!-- Active training -->
+      <section data-screen="train" class="screen hidden px-5"></section>
+
+      <!-- Ranks / body map (Phase 2 placeholder) -->
+      <section data-screen="ranks" class="screen hidden px-5"></section>
+
+    </main>
+
+    <!-- ===== Bottom navigation ===== -->
+    <nav class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-md bg-[#121511] border-t border-white/5 z-30">
+      <ul class="grid grid-cols-5 text-[11px] font-medium">
+        <li><button class="nav-btn" data-nav="home">
+          <span class="nav-icon">🏠</span><span>Inicio</span></button></li>
+        <li><button class="nav-btn" data-nav="exercises">
+          <span class="nav-icon">🏋️</span><span>Ejercicios</span></button></li>
+        <li><button class="nav-btn" data-nav="routines">
+          <span class="nav-icon">📋</span><span>Rutinas</span></button></li>
+        <li><button class="nav-btn" data-nav="train">
+          <span class="nav-icon">⏱️</span><span>Entrenar</span></button></li>
+        <li><button class="nav-btn" data-nav="ranks">
+          <span class="nav-icon">🏅</span><span>Rangos</span></button></li>
+      </ul>
+    </nav>
+
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
